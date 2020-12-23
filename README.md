@@ -1,4 +1,4 @@
-# Projeto-Six-WebAPI-Angular
+<h2> Projeto-Six-WebAPI-Angular</h2>
 <h3>Projeto crud desenvolvido com API .NET CORE  Angular (SqlServer)</h3>
 
 ### Features
@@ -10,9 +10,9 @@
 - [x] Telas -> Angular
 
 
-🚀 -<h3> Ferramentas</h3>
+ -<h3> Ferramentas</h3>
 
-    **SETUP** 
+    🚀
     
      | VS Code |Visual Studio 2019|SQL-SERVER |Angular
     
