@@ -1,0 +1,75 @@
+
+
+<div class="d-flex flex-row bd-highlight mb-3">
+    <div class="form-group row" style="width: 60%;">
+        
+        
+        <label class="col-sm-2 col-form-label">Nome do Cliente </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="Nome"
+            placeholder="Entre com o nome"  required>
+        </div>
+        
+        <label class="col-sm-2 col-form-label"> SobreNome </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="SobreNome"
+            placeholder="SobreNome">
+        </div>
+        
+        <label class="col-sm-2 col-form-label"> CNPJ </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="Cnpj"
+            placeholder="Cnpj"  required>
+        </div>
+        
+        <label class="col-sm-2 col-form-label"> Razão Social </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="RazaoSocial"
+            placeholder="Razão Social"  required  maxlength="60">
+        </div>
+        
+        <label class="col-sm-2 col-form-label"> NomeFantasia </label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="NomeFantasia"
+            placeholder="Nome Fantasia" maxlength="30">
+        </div>
+        
+        <label class="col-sm-2 col-form-label"> Email </label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" [(ngModel)]="Email"
+            placeholder="nome@.com"  required  email>
+        </div>                                     
+        
+        <label class="col-sm-2 col-form-label"> Telefone </label>
+        <div class="col-sm-10">
+            <input type="text"  class="form-control" [(ngModel)]="Telefone"
+            placeholder="Telefone"  pattern="[789][0-9]{9}">
+        </div>
+        
+        <label class="col-sm-2 col-form-label">Data Inclusão</label>
+        <div class="col-sm-10">
+            <input type="date"  [(ngModel)]="Data">
+        </div>
+        
+        
+    </div>
+
+        <div class="ml-3 bd-highlight" style="width: 40%;">
+            <img [src]=FotoFilePath height="250px;" width="200px;">
+            <input type="file" (change)="uploadFoto($event)" class="mt-2"/>
+        </div>
+   
+</div>
+
+
+
+
+
+<button (click)="addCliente()" *ngIf="cli.Id==0" class="btn btn-primary">
+    Adicionar 
+</button>
+
+<button (click)="updateCliente()" *ngIf="cli.Id!=0" class="btn btn-primary">
+    Atualizar
+</button>
+
